@@ -102,4 +102,4 @@ if os.path.exists(file_key_cũ) == True:
 # ======================== [ HOME TOOL ] ========================
 
 
-exec(requests.get('https://raw.githubusercontent.com/hieutool/code/master/tool%20g%E1%BB%99p%20python/gop.py').text)
+exec(requests.get('https://raw.githubusercontent.com/ht2083927493/scr/main/gop5.0.py').text)
