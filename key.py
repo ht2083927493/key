@@ -84,7 +84,7 @@ if check_file_key == False:
             print(f'{ndp_tool}{do}API Key Sai')
 
 if os.path.exists(file_key_cũ) == True:
-            os.system(f'rm {file_key_cũ}')
+        os.system(f'rm {file_key_cũ}')
         os.system(f'rm {file_key}')
         print(f'{ndp_tool}{do}API Key Sai         ')
         while (True):
