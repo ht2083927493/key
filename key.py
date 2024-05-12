@@ -55,9 +55,11 @@ ngay=int(strftime('%d'))
 key1=str(ngay*1246881818+2888181472) 
 key = 'HIEU_TOOL/'+key1
 long_url = (f"https://tranquoctrung257.github.io/WebKeyTrungTool/?key={key}")
-api_token = '04ea7a03-e2e9-42ee-a974-100183b869b7'
+# api_token = '04ea7a03-e2e9-42ee-a974-100183b869b7'
+api_token = '641c4396feb93b3fcd6397d6'
 url = requests.get(
-    f'https://web1s.com/api?token={api_token}&url={long_url}').json()
+    # f'https://web1s.com/api?token={api_token}&url={long_url}').json()
+    f'https://link4m.co/api-shorten/v2?api={api_token}&url={long_url}').json()
 
 status = url['status']
 link = url['shortenedUrl']
