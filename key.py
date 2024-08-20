@@ -42,64 +42,6 @@ def banner():
 # =======================[ NHẬP KEY ]=======================
 os.system("cls" if os.name == "nt" else "clear")
 banner()
-time = datetime.now()
-a = time.strftime("%d")
-h = int(time.strftime("%d"))
-ngày_trc = h-1
-b = time.strftime("%m")
-day = time.strftime("%d-%m-%Y")
-today = time.strftime("%d-%m-%Y")
-d = time.strftime("%d-%m")
-encodedBytes = base64.b64encode(d.encode("utf-8"))
-ngay=int(strftime('%d'))
-key1=str(ngay*1246881818+2888181472) 
-key = 'HIEU_TOOL/'+key1
-long_url = (f"https://tranquoctrung257.github.io/WebKeyTrungTool/?key={key}")
-api_token = '04ea7a03-e2e9-42ee-a974-100183b869b7'
-# api_token = '641c4396feb93b3fcd6397d6'
-url = requests.get(
-    f'https://web1s.com/api?token={api_token}&url={long_url}').json()
-    # f'https://link4m.co/api-shorten/v2?api=641c4396feb93b3fcd6397d6&url={long_url}').json()
-
-status = url['status']
-link = url['shortenedUrl']
-
-# lấy key
-file_key = f'{__file__}{a}'
-file_key_cũ = f'key-ngày{ngày_trc}.txt'
-check_file_key = os.path.exists(file_key)
-if check_file_key == False:
-    print(f"{ndp_tool}{luc}Đây Là Tool Free Nên Key Sẽ Thay Đổi Mỗi Ngày !!")
-    print(f'{ndp_tool}{luc}Truy Cập Vào Link{trang}: {link} {luc}Để Lấy Key Miễn Phí')
-    print(thanh)
-    while (True):
-        os.system(f"termux-open-url {link} ")
-        ma = input(
-            f"{ndp_tool}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
-        if ma == key:
-            print(f'{ndp_tool}{luc}API Key Chính Xác')
-            luu = open(file_key, 'a+')
-            luu.write(ma)
-            luu.close()
-            break
-        elif ma != key:
-            print(f'{ndp_tool}{do}API Key Sai')
-
-if os.path.exists(file_key_cũ) == True:
-        os.system(f'rm {file_key_cũ}')
-        os.system(f'rm {file_key}')
-        print(f'{ndp_tool}{do}API Key Sai         ')
-        while (True):
-            ma = input(
-                f"{ndp_tool}{luc}Nhập API Key\033[1;32m Ngày \033[1;37m{today}: \033[1;33m")
-            if ma == key:
-                print(f'{ndp_tool}{luc}API Key Chính Xác')
-                luu = open(file_key, 'a+')
-                luu.write(ma)
-                luu.close()
-                break
-            elif ma != key:
-                print(f'{ndp_tool}{do}API Key Sai           ')
 
 # ======================== [ HOME TOOL ] ========================
 
